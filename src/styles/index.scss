@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  background-size: cover;
+}
+
+.rainy-bg {
+  background-image: url("../assets/images/rainy-bg.jpg");
+}
+
+.winter-bg {
+  background-image: url("../assets/images/winter-bg.jpg");
+}
+
+.summer-bg {
+  background-image: url("../assets/images/summer-bg.jpg");
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px;
+  border-radius: 20px;
+}
+
+h1 {
+  color: orange;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.audios {
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.audio {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.audio-1 {
+  background-image: url("../assets/images/rainy-bg.jpg");
+  background-size: contain;
+  &::after {
+    background-image: url("../assets/icons/cloud-rain.svg");
+  }
+}
+
+.audio-2 {
+  background-image: url("../assets/images/summer-bg.jpg");
+  background-size: contain;
+  &::after {
+    background-image: url("../assets/icons/sun.svg");
+  }
+}
+
+.audio-3 {
+  background-image: url("../assets/images/winter-bg.jpg");
+  background-size: contain;
+  &::after {
+    background-image: url("../assets/icons/cloud-snow.svg");
+  }
+}
+
+.volume {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
